@@ -1,4 +1,7 @@
-/* Realizar el algoritmo que permita ingresar los datos de los alumnos de una division de la UTN FRA,
+/* 
+JAZMÍN NAZARZADEH
+PUNTO 2
+Realizar el algoritmo que permita ingresar los datos de los alumnos de una division de la UTN FRA,
 los datos solicitados son:
 nombre
 Tipo curasada("libre";"presencial";"remota")
