@@ -112,11 +112,11 @@ function mostrar() {
 
     // b) El nombre del mas joven de los alumnos entre los que la dan libre
     if (tipoCursada == "libre") {
+      contadorLibres++;
       if (flagMasJoven || edad < edadMasJoven) {
         nombreEdadMasJoven = nombreAlumno;
+        flagMasJoven = false;
       }
-
-      contadorLibres++;
     }
 
     // f) La edad y nombre del que cursa mas materias que no sean en forma remota
@@ -142,11 +142,10 @@ function mostrar() {
   }
 
   // b) El nombre del mas joven de los alumnos entre los que la dan libre
-  if (contadorLibres != 0) {
+  if (contadorLibres > 1) {
     document.write("<br>Nombre del mas joven de los alumnos entre los que la dan libre: " + nombreEdadMasJoven);
   } else {
     document.write("<br>Nombre del mas joven de los alumnos entre los que la dan libre: " + nombreEdadMasJoven);
-
   }
 
   // d) El promedio de nota por sexo
