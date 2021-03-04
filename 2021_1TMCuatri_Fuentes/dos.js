@@ -41,6 +41,8 @@ function mostrar() {
   let promedioFemenino;
   let promedioMasculino;
   let promedioNoBinario;
+  let edadCursaNoRemoto;
+  let contadorNoRemoto;
 
 
   flagMejorPromedioNoMasculino = true;
@@ -129,6 +131,7 @@ function mostrar() {
         edadCursaNoRemoto = edad;
         flagCursadaNoRemota = false;
       }
+      contadorNoRemoto++;
     }
 
 
@@ -138,14 +141,14 @@ function mostrar() {
 
 
   // a) El nombre del mejor promedio que no sea masculino
-  if (contadorNotaFemenino < 1 || contadorNotaNoBinario < 1) {
+  if (contadorNotaFemenino != 0 || contadorNotaNoBinario != 0) {
     document.write("<br>Nombre del mejor promedio que no sea masculino: " + mejorPromedioNoMasculino);
   } else {
     document.write("<br>Nombre del mejor promedio que no sea masculino: No hay alumnos que no sean masculinos");
   }
 
   // b) El nombre del mas joven de los alumnos entre los que la dan libre
-  if (contadorLibres > 1) {
+  if (contadorLibres != 0) {
     document.write("<br>Nombre del mas joven de los alumnos entre los que la dan libre: " + nombreEdadMasJoven);
   } else {
     document.write("<br>Nombre del mas joven de los alumnos entre los que la dan libre: " + nombreEdadMasJoven);
@@ -175,7 +178,12 @@ function mostrar() {
   }
 
   // f) La edad y nombre del que cursa mas materias que no sean en forma remota
-  document.write("<br>Nombre del que cursa más materias que no sean en forma remota: " + nombreCursaNoRemoto + " y su edad: " + edadCursaNoRemoto);
+  if (contadorNoRemoto != 0) {
+    document.write("<br>Nombre del que cursa más materias que no sean en forma remota: " + nombreCursaNoRemoto + " y su edad: " + edadCursaNoRemoto);
+  } else {
+    document.write("<br>Nombre del que cursa más materias que no sean en forma remota y su edad: No hay");
+
+  }
 
 }
 
